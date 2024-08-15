@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Desafio 2 - Multiplicar Números Ímpares</title>
+  </head>
+
+  <body>
+    <h1>Desafio 2 - Multiplicar Números Ímpares</h1>
+    <script>
+        function criarImpares() {
+          let criarImpar = [];
+          for (let i = 0; i <= 7; i++) {
+            if (i % 2 !== 0) {
+              criarImpar.push(i);
+            }
+          }
+          return criarImpar;
+        }
+
+        function multiplicarPorFator(array, fator) {
+          let resultado = array.map(function(numero) {
+            return numero * fator;
+          });
+          return resultado;
+        }
+
+        let impares = criarImpares();
+        let imparesMultiplicados = multiplicarPorFator(impares, 2);
+
+        document.write(imparesMultiplicados);
+    </script>
+  </body>
+</html>

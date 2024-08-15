@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Desafio 3 - Multiplicar Números Ímpares</title>
+  </head>
+
+  <body>
+    <h1>Desafio 3 - Somar os Números do Array</h1>
+    <script>
+      function criarImpares() {
+        let criarImpar = [];
+        for (let i = 0; i <= 7; i++) {
+          if (i % 2 !== 0) {
+            criarImpar.push(i);
+          }
+        }
+        return criarImpar;
+      }
+
+      function multiplicarPorFator(array, fator) {
+        return array.map(function (numero) {
+          return numero * fator;
+        });
+      }
+
+      function somarArray(arr) {
+        let soma = 0;
+        arr.forEach(function (numero) {
+          soma += numero;
+        });
+        return soma;
+      }
+
+      let impares = criarImpares();
+      let imparesMultiplicados = multiplicarPorFator(impares, 2);
+      let resultado = somarArray(imparesMultiplicados);
+
+      document.write(resultado);
+    </script>
+  </body>
+</html>

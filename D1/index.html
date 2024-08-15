@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Desafio 1 - Criar um array de números ímpares</title>
+  </head>
+  <body>
+    <h1>Desafio 1</h1>
+    <script>
+      function criarImpares() {
+        let criarImpar = [];
+        for (let i = 0; i <= 7; i++) {
+          if (i % 2 !== 0) {
+            criarImpar.push(i);
+          }
+        }
+        return criarImpar;
+      }
+      document.write(criarImpares());
+    </script>
+  </body>
+</html>
